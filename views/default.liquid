@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% comment %} The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags {% endcomment %}
+
+    {% comment %} Title {% endcomment %}
+    <title>{{ title }}</title>
+
+    {% comment %} Favicon {% endcomment %}
+    <link rel="icon" href="/img/core-img/favicon.ico">
+
+    {% comment %} Stylesheet {% endcomment %}
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+    {% comment %} Header renders here {% endcomment %}
+
+    {% render 'header.liquid' %}
+
+    {% comment %} Page Content renders here {% endcomment %}
+    
+    {% block content %}
+
+    {% endblock %}
+
+    {% comment %} Footer renders here {% endcomment %}
+
+    {% render 'footer.liquid' %}
+    
+    {% comment %} ##### All Javascript Script ##### {% endcomment %}
+    {% comment %} jQuery-2.2.4 js {% endcomment %}
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    {% comment %} Popper js {% endcomment %}
+    <script src="js/bootstrap/popper.min.js"></script>
+    {% comment %} Bootstrap js {% endcomment %}
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    {% comment %} All Plugins js {% endcomment %}
+    <script src="js/plugins/plugins.js"></script>
+    {% comment %} Active js {% endcomment %}
+    <script src="js/active.js"></script>
+</body>
+
+</html>
