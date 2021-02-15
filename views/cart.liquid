@@ -21,31 +21,24 @@
                         <tbody>
                             <tr>
                                 <td class="text-left">Gucci Bag</td>
-                                <td><select name="qty" id="itemQty">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="1">5</option>
-                                    </select></td>
+                                <td><input min="1" value="{{ qtyValue }}" type="number" id="itemQty"></td>
                                 <td>2,000</td>
                                 <td>{{ '$ 2,000' }}</td>
                                 <td>
-                                    <span onclick="" class="fa fa-trash"></span>
-                                    <span onclick="" class="fa fa-heart ml-2"></span>
+                                    <span onclick="" class="text-danger btn fa fa-trash"></span>
                                 </td>
                             </tr>
                         </tbody>
                         <tfoot>
                             <tr>
                                 <td></td>
-                                <td></td>
-                                <td> Grand Total</td>
-                                <td class="text-primary">$ 2,000</td>
-                                <td></td>
+                                <td colspan="2"> Grand Total</td>
+                                <td colspan="2" class="text-primary">$ 2,000</td>
                             </tr>
                         </tfoot>
                     </table>
+
+                    <button class="btn btn-outline-primary mt-3">Proceed to Checkout</button>
                 </div>
             </div>
         </div>

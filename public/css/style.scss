@@ -22,6 +22,12 @@
 
 /* :: 3.0 Base CSS */
 
+#itemQty {
+    max-width: 35px;
+    max-height: 20px;
+    font-size: 16px;
+}
+
 .move-over-line {
     top: -19px !important;
     position: relative;
