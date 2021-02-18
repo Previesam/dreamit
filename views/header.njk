@@ -1,4 +1,4 @@
-{% comment %} Preloader {% endcomment %}
+{# Preloader #}
 <div class="preloader d-flex align-items-center justify-content-center">
     <div class="lds-ellipsis">
         <div></div>
@@ -7,32 +7,33 @@
         <div></div>
     </div>
 </div>
-{% comment %} ##### Header Area Start ##### {% endcomment %}
+{# ##### Header Area Start ##### #}
 <header class="header-area">
-    {% comment %} Navbar Area {% endcomment %}
+    {# Navbar Area #}
     <div class="oneMusic-main-menu py-0">
         <div class="classy-nav-container py-0 breakpoint-off">
             <div class="container py-0 ">
-                {% comment %} Menu {% endcomment %}
+                {# Menu #}
                 <nav class="classy-navbar justify-content-between" id="oneMusicNav">
 
-                    {% comment %} Nav brand {% endcomment %}
-                    <a href="" class="nav-brand"><img src="/img/core-img/logo.png" alt=""></a>
+                    {# Nav brand #}
+                    <a href="/" class="nav-brand"><img src="/img/core-img/logo.png" alt=""></a>
 
-                    {% comment %} Navbar Toggler {% endcomment %}
+                    {# Navbar Toggler #}
                     <div class="classy-navbar-toggler">
                         <span class="navbarToggler"><span></span><span></span><span></span></span>
                     </div>
 
-                    {% comment %} Menu {% endcomment %}
+                    {# Menu #}
                     <div class="classy-menu">
 
-                        {% comment %} Close Button {% endcomment %}
+                        {# Close Button #}
+                        
                         <div class="classycloseIcon">
                             <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                         </div>
 
-                        {% comment %} Nav Start {% endcomment %}
+                        {# Nav Start #}
                         <div class="classynav">
                             <ul>
                                 <li><a href="/">Home</a></li>
@@ -70,14 +71,28 @@
                                 <li><a href="contact">Contact</a></li>
                             </ul>
 
-                            {% comment %} Login/Register & Cart Button {% endcomment %}
+                            {# Login/Register & Cart Button #}
                             <div class="login-register-cart-button d-flex align-items-center">
-                                {% comment %} Login/Register {% endcomment %}
-                                <div class="login-register-btn mr-50">
-                                    <a href="login" id="loginBtn">Login / Register</a>
-                                </div>
+                                {# Login/Register #}
 
-                                {% comment %} Cart Button {% endcomment %}
+                                {% if user %}
+                                    <div class="dropdown mr-50">
+                                        <button class="py-1 btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            My Account
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                            <a class="dropdown-item" href="/profile">Profile</a>
+                                            <a class="dropdown-item" href="/orders">Orders</a>
+                                            <a class="dropdown-item" href="/logout">Logout</a>  
+                                        </div>
+                                    </div>
+                                {% else %}
+                                    <div class="login-register-btn mr-50">
+                                        <a href="login" id="loginBtn">Login / Register</a>
+                                    </div>
+                                {% endif %}
+                
+                                {# Cart Button #}
                                 <div class="cart-btn">
                                     <a href="cart">
                                         <p><span class="icon-shopping-cart"></span> <span class="quantity">1</span></p>
@@ -85,7 +100,7 @@
                                 </div>
                             </div>
                         </div>
-                        {% comment %} Nav End {% endcomment %}
+                        {# Nav End #}
 
                     </div>
                 </nav>
@@ -93,4 +108,4 @@
         </div>
     </div>
 </header>
-{% comment %} ##### Header Area End ##### {% endcomment %}
+{# ##### Header Area End ##### #}

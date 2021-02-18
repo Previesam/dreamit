@@ -1,16 +1,16 @@
-{% layout 'default.liquid' %}
+{% extends 'default.njk' %}
 
 {% block content %}
 
-{% render 'breadcrumb.liquid' page_title: page_title %}
+{% include 'breadcrumb.njk' %}
 
-{% comment %} ##### Cart Area Start ##### {% endcomment %}
+{# ##### Cart Area Start ##### #}
 <section class="login-area section-padding-100">
-    <div class="container-fluid mx-1">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
                 <div class="login-content px-1">
-                    <table class="table">
+                    <table class="table table-hover">
                         <thead>
                             <th class="text-left">Item</th>
                             <th>Qty</th>
@@ -23,7 +23,16 @@
                                 <td class="text-left">Gucci Bag</td>
                                 <td><input min="1" value="{{ qtyValue }}" type="number" id="itemQty"></td>
                                 <td>2,000</td>
-                                <td>{{ '$ 2,000' }}</td>
+                                <td>{{ qtyValue * 2000  }}</td>
+                                <td>
+                                    <span onclick="" class="text-danger btn fa fa-trash"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Gucci Bag</td>
+                                <td><input min="1" value="{{ qtyValue }}" type="number" id="itemQty"></td>
+                                <td>2,000</td>
+                                <td>{{ qtyValue * 2000  }}</td>
                                 <td>
                                     <span onclick="" class="text-danger btn fa fa-trash"></span>
                                 </td>
@@ -38,12 +47,12 @@
                         </tfoot>
                     </table>
 
-                    <button class="btn btn-outline-primary mt-3">Proceed to Checkout</button>
+                    <a href="/checkout"><button class="btn btn-outline-primary mt-3">Proceed to Checkout</button></a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-{% comment %} ##### Cart Area End ##### {% endcomment %}
+{# ##### Cart Area End ##### #}
 
 {% endblock %}

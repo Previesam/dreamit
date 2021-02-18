@@ -1,0 +1,73 @@
+{% extends 'default.njk' %}
+
+{% block content %}
+
+{% include 'breadcrumb.njk' %}
+
+{# ##### Cart Area Start ##### #}
+<section class="login-area section-padding-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="login-content">
+                    <div class="text-center h5 text-primary my-3">Verify Order</div>
+                    <table class="table table-hover">
+                        <thead>
+                            <th class="text-left">Item</th>
+                            <th>Qty</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-left">Gucci Bag</td>
+                                <td>2</td>
+                                <td>{{ qtyValue * 2000  }}</td>
+                                <td>
+                                    <span onclick="" class="text-danger btn fa fa-trash"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Gucci Bag</td>
+                                <td>2</td>
+                                <td>{{ qtyValue * 2000  }}</td>
+                                <td>
+                                    <span onclick="" class="text-danger btn fa fa-trash"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td></td>
+                                <td colspan="1"> Grand Total</td>
+                                <td colspan="2" class="text-primary">$ 2,000</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <div class="text-center my-3 h6 text-primary">Delivery Information</div>
+                    <form action="#" method="post">
+                            <div class="form-group">
+                                <label for="InputEmail">Email address</label>
+                                <input type="email" class="form-control" id="InputEmail"
+                                    aria-describedby="emailHelp" placeholder="Enter E-mail">
+                            </div>
+                            <div class="form-group">
+                                <label for="InputPhone">Phone</label>
+                                <input type="text" class="form-control" id="InputPhone"
+                                    placeholder="Phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="InputAddress">Delivery Address</label>
+                                <textarea rows="4" class="form-control" id="InputAddress"
+                                    placeholder="Address"></textarea>
+                            </div>
+                    </form>
+                    <button class="btn btn-outline-primary mt-3">Proceed to Payment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{# ##### Cart Area End ##### #}
+
+{% endblock %}

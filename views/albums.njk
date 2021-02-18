@@ -1,10 +1,10 @@
-{% layout 'default.liquid' %}
+{% extends 'default.njk' %}
 
 {% block content %}
 
-{% render 'breadcrumb.liquid' page_title: page_title %}
+{% include 'breadcrumb.njk' %}
 
-{% comment %} ##### Album Catagory Area Start ##### {% endcomment %}
+{# ##### Album Catagory Area Start ##### #}
 <section class="album-catagory section-padding-100-0">
     <div class="container">
         <div class="row">
@@ -44,7 +44,7 @@
 
         <div class="row oneMusic-albums">
 
-            {% comment %} Single Album {% endcomment %}
+            {# Single Album #}
             <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item t c p">
                 <div class="single-album">
                     <img src="img/bg-img/a1.jpg" alt="">
@@ -57,7 +57,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Album {% endcomment %}
+            {# Single Album #}
             <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item s e q">
                 <div class="single-album">
                     <img src="img/bg-img/a2.jpg" alt="">
@@ -70,7 +70,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Album {% endcomment %}
+            {# Single Album #}
             <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item w f r">
                 <div class="single-album">
                     <img src="img/bg-img/a3.jpg" alt="">
@@ -83,7 +83,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Album {% endcomment %}
+            {# Single Album #}
             <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item t g u">
                 <div class="single-album">
                     <img src="img/bg-img/a4.jpg" alt="">
@@ -96,7 +96,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Album {% endcomment %}
+            {# Single Album #}
             <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item d h v">
                 <div class="single-album">
                     <img src="img/bg-img/a5.jpg" alt="">
@@ -109,7 +109,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Album {% endcomment %}
+            {# Single Album #}
             <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item t i x">
                 <div class="single-album">
                     <img src="img/bg-img/a6.jpg" alt="">
@@ -122,7 +122,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Album {% endcomment %}
+            {# Single Album #}
             <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item b j y">
                 <div class="single-album">
                     <img src="img/bg-img/a7.jpg" alt="">
@@ -135,7 +135,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Album {% endcomment %}
+            {# Single Album #}
             <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item a k z">
                 <div class="single-album">
                     <img src="img/bg-img/a8.jpg" alt="">
@@ -148,7 +148,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Album {% endcomment %}
+            {# Single Album #}
             <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item w l number">
                 <div class="single-album">
                     <img src="img/bg-img/a9.jpg" alt="">
@@ -161,7 +161,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Album {% endcomment %}
+            {# Single Album #}
             <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item d m">
                 <div class="single-album">
                     <img src="img/bg-img/a10.jpg" alt="">
@@ -174,7 +174,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Album {% endcomment %}
+            {# Single Album #}
             <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item t n">
                 <div class="single-album">
                     <img src="img/bg-img/a11.jpg" alt="">
@@ -187,7 +187,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Album {% endcomment %}
+            {# Single Album #}
             <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item b o">
                 <div class="single-album">
                     <img src="img/bg-img/a12.jpg" alt="">
@@ -203,23 +203,23 @@
         </div>
     </div>
 </section>
-{% comment %} ##### Album Catagory Area End ##### {% endcomment %}
+{# ##### Album Catagory Area End ##### #}
 
-{% comment %} ##### Buy Now Area Start ##### {% endcomment %}
+{# ##### Buy Now Area Start ##### #}
 <div class="oneMusic-buy-now-area mb-100">
     <div class="container">
         <div class="row">
 
-            {% comment %} Single Album Area {% endcomment %}
+            {# Single Album Area #}
             <div class="col-12 col-sm-6 col-md-3">
                 <div class="single-album-area">
                     <div class="album-thumb">
                         <img src="img/bg-img/b1.jpg" alt="">
-                        {% comment %} Album Price {% endcomment %}
+                        {# Album Price #}
                         <div class="album-price">
                             <p>$0.90</p>
                         </div>
-                        {% comment %} Play Icon {% endcomment %}
+                        {# Play Icon #}
                         <div class="play-icon">
                             <a href="#" class="video--play--btn"><span class="icon-play-button"></span></a>
                         </div>
@@ -233,7 +233,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Album Area {% endcomment %}
+            {# Single Album Area #}
             <div class="col-12 col-sm-6 col-md-3">
                 <div class="single-album-area">
                     <div class="album-thumb">
@@ -248,7 +248,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Album Area {% endcomment %}
+            {# Single Album Area #}
             <div class="col-12 col-sm-6 col-md-3">
                 <div class="single-album-area">
                     <div class="album-thumb">
@@ -263,7 +263,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Album Area {% endcomment %}
+            {# Single Album Area #}
             <div class="col-12 col-sm-6 col-md-3">
                 <div class="single-album-area">
                     <div class="album-thumb">
@@ -289,9 +289,9 @@
         </div>
     </div>
 </div>
-{% comment %} ##### Buy Now Area End ##### {% endcomment %}
+{# ##### Buy Now Area End ##### #}
 
-{% comment %} ##### Add Area Start ##### {% endcomment %}
+{# ##### Add Area Start ##### #}
 <div class="add-area mb-100">
     <div class="container">
         <div class="row">
@@ -303,14 +303,14 @@
         </div>
     </div>
 </div>
-{% comment %} ##### Add Area End ##### {% endcomment %}
+{# ##### Add Area End ##### #}
 
-{% comment %} ##### Song Area Start ##### {% endcomment %}
+{# ##### Song Area Start ##### #}
 <div class="one-music-songs-area mb-70">
     <div class="container">
         <div class="row">
 
-            {% comment %} Single Song Area {% endcomment %}
+            {# Single Song Area #}
             <div class="col-12">
                 <div class="single-song-area mb-30 d-flex flex-wrap align-items-end">
                     <div class="song-thumbnail">
@@ -327,7 +327,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Song Area {% endcomment %}
+            {# Single Song Area #}
             <div class="col-12">
                 <div class="single-song-area mb-30 d-flex flex-wrap align-items-end">
                     <div class="song-thumbnail">
@@ -344,7 +344,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Song Area {% endcomment %}
+            {# Single Song Area #}
             <div class="col-12">
                 <div class="single-song-area mb-30 d-flex flex-wrap align-items-end">
                     <div class="song-thumbnail">
@@ -361,7 +361,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Song Area {% endcomment %}
+            {# Single Song Area #}
             <div class="col-12">
                 <div class="single-song-area mb-30 d-flex flex-wrap align-items-end">
                     <div class="song-thumbnail">
@@ -381,9 +381,9 @@
         </div>
     </div>
 </div>
-{% comment %} ##### Song Area End ##### {% endcomment %}
+{# ##### Song Area End ##### #}
 
-{% render 'contact-area.liquid' %}
+{% include 'contact-area.njk' %}
 
 
 {% endblock %}

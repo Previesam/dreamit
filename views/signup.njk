@@ -1,0 +1,77 @@
+{% extends 'default.njk' %}
+
+{% block content %}
+
+    {% include 'breadcrumb.njk' %}
+
+    {# ##### Signup Area Start ##### #}
+    <section class="login-area section-padding-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8">
+                    <div class="login-content">
+                        <h3>Welcome</h3>
+                        {# Signup Form #}
+                        <div class="login-form">
+                            {% if message %}
+                                <div class="alert alert-success py-1 my-1" role="alert">
+                                    {{ message }}
+                                </div>
+                                <div class="text-center mt-4">
+                                    <a href="/login">
+                                        <button class="btn btn-outline-success">Continue</button>
+                                    </a>
+                                </div>
+                            {% else %}
+                                <form action="/signup" method="post">
+                                    {% if errors %}
+                                        {% for error in errors %}
+                                            <div class="alert alert-danger py-1 my-1" role="alert">
+                                                {{ error.message }}
+                                            </div>
+                                        {% endfor %}
+                                    {% endif %}
+                                    <div class="form-group mt-4">
+                                        <label for="InputFirstName">First Name</label>
+                                        <input value="{{ formData.firstname }}" name="firstname" type="text" class="form-control" id="InputFirstName" placeholder="Enter First Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="InputLastName">Last Name</label>
+                                        <input value="{{ formData.lastname }}" name="lastname" type="text" class="form-control" id="InputLastName" placeholder="Enter Last Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="InputPhone">Phone</label>
+                                        <input value="{{ formData.phone }}" name="phone" type="text" class="form-control" id="InputPhone" placeholder="Enter Phone No">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="InputEmail">Email address</label>
+                                        <input value="{{ formData.email }}" name="email" type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter E-mail">
+                                        <small id="emailHelp" class="form-text text-muted">
+                                            <i class="fa fa-lock mr-2"></i>We'll never share your email with anyone else.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="InputPassword">Password</label>
+                                        <input value="{{ formData.password }}" name="password" type="password" class="form-control" id="InputPassword" placeholder="Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="InputConfirmPassword">Confirm Password</label>
+                                        <input value="{{ formData.confirmPassword }}" name="confirmPassword" type="password" class="form-control" id="InputConfirmPassword" placeholder="Password">
+                                    </div>
+                                    <button type="submit" class="btn oneMusic-btn mt-30">Sign Up
+                                    </button>
+                                    <div class="text-center mt-4">
+                                        <p>Already have an account?
+                                            <a href="login">Login</a>
+                                            now</p>
+                                    </div>
+                                </form>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {# ##### Signup Area End ##### #}
+
+{% endblock %}

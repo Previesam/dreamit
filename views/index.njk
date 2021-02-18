@@ -1,15 +1,15 @@
-{% layout 'default.liquid' %}
+{% extends 'default.njk' %}
 
 {% block content %}
 
-{% comment %} ##### Hero Area Start ##### {% endcomment %}
+{# ##### Hero Area Start ##### #}
 <section class="hero-area">
     <div class="hero-slides owl-carousel">
-        {% comment %} Single Hero Slide {% endcomment %}
+        {# Single Hero Slide #}
         <div class="single-hero-slide d-flex align-items-center justify-content-center">
-            {% comment %} Slide Img {% endcomment %}
+            {# Slide Img #}
             <div class="slide-img bg-img" style="background-image: url(img/bg-img/bg-1.jpg);"></div>
-            {% comment %} Slide Content {% endcomment %}
+            {# Slide Content #}
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -24,11 +24,11 @@
             </div>
         </div>
 
-        {% comment %} Single Hero Slide {% endcomment %}
+        {# Single Hero Slide #}
         <div class="single-hero-slide d-flex align-items-center justify-content-center">
-            {% comment %} Slide Img {% endcomment %}
+            {# Slide Img #}
             <div class="slide-img bg-img" style="background-image: url(img/bg-img/bg-2.jpg);"></div>
-            {% comment %} Slide Content {% endcomment %}
+            {# Slide Content #}
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -45,9 +45,9 @@
         </div>
     </div>
 </section>
-{% comment %} ##### Hero Area End ##### {% endcomment %}
+{# ##### Hero Area End ##### #}
 
-{% comment %} Social Icon Start {% endcomment %}
+{# Social Icon Start #}
 
 <section>
     <div class="d-flex align-items-center justify-content-end move-over-line container">
@@ -74,7 +74,7 @@
     </div>
 </section>
 
-{% comment %} ##### Latest Albums Area Start ##### {% endcomment %}
+{# ##### Latest Albums Area Start ##### #}
 <section class="latest-albums-area section-padding-100">
     <div class="container">
         <div class="row">
@@ -99,7 +99,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="albums-slideshow owl-carousel">
-                    {% comment %} Single Album {% endcomment %}
+                    {# Single Album #}
                     <div class="single-album">
                         <img src="img/bg-img/a1.jpg" alt="">
                         <div class="album-info">
@@ -110,7 +110,7 @@
                         </div>
                     </div>
 
-                    {% comment %} Single Album {% endcomment %}
+                    {# Single Album #}
                     <div class="single-album">
                         <img src="img/bg-img/a2.jpg" alt="">
                         <div class="album-info">
@@ -121,7 +121,7 @@
                         </div>
                     </div>
 
-                    {% comment %} Single Album {% endcomment %}
+                    {# Single Album #}
                     <div class="single-album">
                         <img src="img/bg-img/a3.jpg" alt="">
                         <div class="album-info">
@@ -132,7 +132,7 @@
                         </div>
                     </div>
 
-                    {% comment %} Single Album {% endcomment %}
+                    {# Single Album #}
                     <div class="single-album">
                         <img src="img/bg-img/a4.jpg" alt="">
                         <div class="album-info">
@@ -143,7 +143,7 @@
                         </div>
                     </div>
 
-                    {% comment %} Single Album {% endcomment %}
+                    {# Single Album #}
                     <div class="single-album">
                         <img src="img/bg-img/a5.jpg" alt="">
                         <div class="album-info">
@@ -154,7 +154,7 @@
                         </div>
                     </div>
 
-                    {% comment %} Single Album {% endcomment %}
+                    {# Single Album #}
                     <div class="single-album">
                         <img src="img/bg-img/a6.jpg" alt="">
                         <div class="album-info">
@@ -165,7 +165,7 @@
                         </div>
                     </div>
 
-                    {% comment %} Single Album {% endcomment %}
+                    {# Single Album #}
                     <div class="single-album">
                         <img src="img/bg-img/a7.jpg" alt="">
                         <div class="album-info">
@@ -180,9 +180,9 @@
         </div>
     </div>
 </section>
-{% comment %} ##### Latest Albums Area End ##### {% endcomment %}
+{# ##### Latest Albums Area End ##### #}
 
-{% comment %} ##### Buy Now Area Start ##### {% endcomment %}
+{# ##### Buy Now Area Start ##### #}
 <section class="oneMusic-buy-now-area has-fluid bg-gray section-padding-100">
     <div class="container-fluid">
         <div class="row">
@@ -196,16 +196,16 @@
 
         <div class="row">
 
-            {% comment %} Single Album Area {% endcomment %}
+            {# Single Album Area #}
             <div class="col-12 col-sm-6 col-md-4 col-lg-2">
                 <div class="single-album-area wow fadeInUp" data-wow-delay="100ms">
                     <div class="album-thumb">
                         <img src="img/bg-img/b1.jpg" alt="">
-                        {% comment %} Album Price {% endcomment %}
+                        {# Album Price #}
                         <div class="album-price">
                             <p>$0.90</p>
                         </div>
-                        {% comment %} Play Icon {% endcomment %}
+                        {# Play Icon #}
                         <div class="play-icon">
                             <a href="#" class="video--play--btn"><span class="icon-play-button"></span></a>
                         </div>
@@ -219,7 +219,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Album Area {% endcomment %}
+            {# Single Album Area #}
             <div class="col-12 col-sm-6 col-md-4 col-lg-2">
                 <div class="single-album-area wow fadeInUp" data-wow-delay="200ms">
                     <div class="album-thumb">
@@ -234,7 +234,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Album Area {% endcomment %}
+            {# Single Album Area #}
             <div class="col-12 col-sm-6 col-md-4 col-lg-2">
                 <div class="single-album-area wow fadeInUp" data-wow-delay="300ms">
                     <div class="album-thumb">
@@ -249,7 +249,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Album Area {% endcomment %}
+            {# Single Album Area #}
             <div class="col-12 col-sm-6 col-md-4 col-lg-2">
                 <div class="single-album-area wow fadeInUp" data-wow-delay="400ms">
                     <div class="album-thumb">
@@ -264,16 +264,16 @@
                 </div>
             </div>
 
-            {% comment %} Single Album Area {% endcomment %}
+            {# Single Album Area #}
             <div class="col-12 col-sm-6 col-md-4 col-lg-2">
                 <div class="single-album-area wow fadeInUp" data-wow-delay="500ms">
                     <div class="album-thumb">
                         <img src="img/bg-img/b1.jpg" alt="">
-                        {% comment %} Album Price {% endcomment %}
+                        {# Album Price #}
                         <div class="album-price">
                             <p>$0.90</p>
                         </div>
-                        {% comment %} Play Icon {% endcomment %}
+                        {# Play Icon #}
                         <div class="play-icon">
                             <a href="#" class="video--play--btn"><span class="icon-play-button"></span></a>
                         </div>
@@ -287,7 +287,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Album Area {% endcomment %}
+            {# Single Album Area #}
             <div class="col-12 col-sm-6 col-md-4 col-lg-2">
                 <div class="single-album-area wow fadeInUp" data-wow-delay="600ms">
                     <div class="album-thumb">
@@ -302,7 +302,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Album Area {% endcomment %}
+            {# Single Album Area #}
             <div class="col-12 col-sm-6 col-md-4 col-lg-2">
                 <div class="single-album-area wow fadeInUp" data-wow-delay="100ms">
                     <div class="album-thumb">
@@ -317,7 +317,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Album Area {% endcomment %}
+            {# Single Album Area #}
             <div class="col-12 col-sm-6 col-md-4 col-lg-2">
                 <div class="single-album-area wow fadeInUp" data-wow-delay="200ms">
                     <div class="album-thumb">
@@ -332,16 +332,16 @@
                 </div>
             </div>
 
-            {% comment %} Single Album Area {% endcomment %}
+            {# Single Album Area #}
             <div class="col-12 col-sm-6 col-md-4 col-lg-2">
                 <div class="single-album-area wow fadeInUp" data-wow-delay="300ms">
                     <div class="album-thumb">
                         <img src="img/bg-img/b1.jpg" alt="">
-                        {% comment %} Album Price {% endcomment %}
+                        {# Album Price #}
                         <div class="album-price">
                             <p>$0.90</p>
                         </div>
-                        {% comment %} Play Icon {% endcomment %}
+                        {# Play Icon #}
                         <div class="play-icon">
                             <a href="#" class="video--play--btn"><span class="icon-play-button"></span></a>
                         </div>
@@ -355,7 +355,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Album Area {% endcomment %}
+            {# Single Album Area #}
             <div class="col-12 col-sm-6 col-md-4 col-lg-2">
                 <div class="single-album-area wow fadeInUp" data-wow-delay="400ms">
                     <div class="album-thumb">
@@ -370,7 +370,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Album Area {% endcomment %}
+            {# Single Album Area #}
             <div class="col-12 col-sm-6 col-md-4 col-lg-2">
                 <div class="single-album-area wow fadeInUp" data-wow-delay="500ms">
                     <div class="album-thumb">
@@ -385,7 +385,7 @@
                 </div>
             </div>
 
-            {% comment %} Single Album Area {% endcomment %}
+            {# Single Album Area #}
             <div class="col-12 col-sm-6 col-md-4 col-lg-2">
                 <div class="single-album-area wow fadeInUp" data-wow-delay="600ms">
                     <div class="album-thumb">
@@ -411,9 +411,9 @@
         </div>
     </div>
 </section>
-{% comment %} ##### Buy Now Area End ##### {% endcomment %}
+{# ##### Buy Now Area End ##### #}
 
-{% comment %} ##### Featured Artist Area Start ##### {% endcomment %}
+{# ##### Featured Artist Area Start ##### #}
 <section class="featured-artist-area section-padding-100 bg-img bg-overlay bg-fixed"
     style="background-image: url(img/bg-img/bg-4.jpg);">
     <div class="container">
@@ -425,7 +425,7 @@
             </div>
             <div class="col-12 col-md-7 col-lg-8">
                 <div class="featured-artist-content">
-                    {% comment %} Section Heading {% endcomment %}
+                    {# Section Heading #}
                     <div class="section-heading white text-left mb-30">
                         <p>See what’s new</p>
                         <h2>Buy What’s New</h2>
@@ -447,13 +447,13 @@
         </div>
     </div>
 </section>
-{% comment %} ##### Featured Artist Area End ##### {% endcomment %}
+{# ##### Featured Artist Area End ##### #}
 
-{% comment %} ##### Miscellaneous Area Start ##### {% endcomment %}
+{# ##### Miscellaneous Area Start ##### #}
 <section class="miscellaneous-area section-padding-100-0">
     <div class="container">
         <div class="row">
-            {% comment %} ***** Weeks Top ***** {% endcomment %}
+            {# ***** Weeks Top ***** #}
             <div class="col-12 col-lg-4">
                 <div class="weeks-top-area mb-100">
                     <div class="section-heading text-left mb-50 wow fadeInUp" data-wow-delay="50ms">
@@ -461,7 +461,7 @@
                         <h2>This week’s top</h2>
                     </div>
 
-                    {% comment %} Single Top Item {% endcomment %}
+                    {# Single Top Item #}
                     <div class="single-top-item d-flex wow fadeInUp" data-wow-delay="100ms">
                         <div class="thumbnail">
                             <img src="img/bg-img/wt1.jpg" alt="">
@@ -472,7 +472,7 @@
                         </div>
                     </div>
 
-                    {% comment %} Single Top Item {% endcomment %}
+                    {# Single Top Item #}
                     <div class="single-top-item d-flex wow fadeInUp" data-wow-delay="150ms">
                         <div class="thumbnail">
                             <img src="img/bg-img/wt2.jpg" alt="">
@@ -483,7 +483,7 @@
                         </div>
                     </div>
 
-                    {% comment %} Single Top Item {% endcomment %}
+                    {# Single Top Item #}
                     <div class="single-top-item d-flex wow fadeInUp" data-wow-delay="200ms">
                         <div class="thumbnail">
                             <img src="img/bg-img/wt3.jpg" alt="">
@@ -494,7 +494,7 @@
                         </div>
                     </div>
 
-                    {% comment %} Single Top Item {% endcomment %}
+                    {# Single Top Item #}
                     <div class="single-top-item d-flex wow fadeInUp" data-wow-delay="250ms">
                         <div class="thumbnail">
                             <img src="img/bg-img/wt4.jpg" alt="">
@@ -505,7 +505,7 @@
                         </div>
                     </div>
 
-                    {% comment %} Single Top Item {% endcomment %}
+                    {# Single Top Item #}
                     <div class="single-top-item d-flex wow fadeInUp" data-wow-delay="300ms">
                         <div class="thumbnail">
                             <img src="img/bg-img/wt5.jpg" alt="">
@@ -516,7 +516,7 @@
                         </div>
                     </div>
 
-                    {% comment %} Single Top Item {% endcomment %}
+                    {# Single Top Item #}
                     <div class="single-top-item d-flex wow fadeInUp" data-wow-delay="350ms">
                         <div class="thumbnail">
                             <img src="img/bg-img/wt6.jpg" alt="">
@@ -530,7 +530,7 @@
                 </div>
             </div>
 
-            {% comment %} ***** New Hits Songs ***** {% endcomment %}
+            {# ***** New Hits Songs ***** #}
             <div class="col-12 col-lg-4">
                 <div class="new-hits-area mb-100">
                     <div class="section-heading text-left mb-50 wow fadeInUp" data-wow-delay="50ms">
@@ -538,7 +538,7 @@
                         <h2>New Hits</h2>
                     </div>
 
-                    {% comment %} Single Top Item {% endcomment %}
+                    {# Single Top Item #}
                     <div class="single-new-item d-flex align-items-center justify-content-between wow fadeInUp"
                         data-wow-delay="100ms">
                         <div class="first-part d-flex align-items-center">
@@ -555,7 +555,7 @@
                         </audio>
                     </div>
 
-                    {% comment %} Single Top Item {% endcomment %}
+                    {# Single Top Item #}
                     <div class="single-new-item d-flex align-items-center justify-content-between wow fadeInUp"
                         data-wow-delay="150ms">
                         <div class="first-part d-flex align-items-center">
@@ -572,7 +572,7 @@
                         </audio>
                     </div>
 
-                    {% comment %} Single Top Item {% endcomment %}
+                    {# Single Top Item #}
                     <div class="single-new-item d-flex align-items-center justify-content-between wow fadeInUp"
                         data-wow-delay="200ms">
                         <div class="first-part d-flex align-items-center">
@@ -589,7 +589,7 @@
                         </audio>
                     </div>
 
-                    {% comment %} Single Top Item {% endcomment %}
+                    {# Single Top Item #}
                     <div class="single-new-item d-flex align-items-center justify-content-between wow fadeInUp"
                         data-wow-delay="250ms">
                         <div class="first-part d-flex align-items-center">
@@ -606,7 +606,7 @@
                         </audio>
                     </div>
 
-                    {% comment %} Single Top Item {% endcomment %}
+                    {# Single Top Item #}
                     <div class="single-new-item d-flex align-items-center justify-content-between wow fadeInUp"
                         data-wow-delay="300ms">
                         <div class="first-part d-flex align-items-center">
@@ -623,7 +623,7 @@
                         </audio>
                     </div>
 
-                    {% comment %} Single Top Item {% endcomment %}
+                    {# Single Top Item #}
                     <div class="single-new-item d-flex align-items-center justify-content-between wow fadeInUp"
                         data-wow-delay="350ms">
                         <div class="first-part d-flex align-items-center">
@@ -642,7 +642,7 @@
                 </div>
             </div>
 
-            {% comment %} ***** Popular Artists ***** {% endcomment %}
+            {# ***** Popular Artists ***** #}
             <div class="col-12 col-lg-4">
                 <div class="popular-artists-area mb-100">
                     <div class="section-heading text-left mb-50 wow fadeInUp" data-wow-delay="50ms">
@@ -650,7 +650,7 @@
                         <h2>Popular Artist</h2>
                     </div>
 
-                    {% comment %} Single Artist {% endcomment %}
+                    {# Single Artist #}
                     <div class="single-artists d-flex align-items-center wow fadeInUp" data-wow-delay="100ms">
                         <div class="thumbnail">
                             <img src="img/bg-img/pa1.jpg" alt="">
@@ -660,7 +660,7 @@
                         </div>
                     </div>
 
-                    {% comment %} Single Artist {% endcomment %}
+                    {# Single Artist #}
                     <div class="single-artists d-flex align-items-center wow fadeInUp" data-wow-delay="150ms">
                         <div class="thumbnail">
                             <img src="img/bg-img/pa2.jpg" alt="">
@@ -670,7 +670,7 @@
                         </div>
                     </div>
 
-                    {% comment %} Single Artist {% endcomment %}
+                    {# Single Artist #}
                     <div class="single-artists d-flex align-items-center wow fadeInUp" data-wow-delay="200ms">
                         <div class="thumbnail">
                             <img src="img/bg-img/pa3.jpg" alt="">
@@ -680,7 +680,7 @@
                         </div>
                     </div>
 
-                    {% comment %} Single Artist {% endcomment %}
+                    {# Single Artist #}
                     <div class="single-artists d-flex align-items-center wow fadeInUp" data-wow-delay="250ms">
                         <div class="thumbnail">
                             <img src="img/bg-img/pa4.jpg" alt="">
@@ -690,7 +690,7 @@
                         </div>
                     </div>
 
-                    {% comment %} Single Artist {% endcomment %}
+                    {# Single Artist #}
                     <div class="single-artists d-flex align-items-center wow fadeInUp" data-wow-delay="300ms">
                         <div class="thumbnail">
                             <img src="img/bg-img/pa5.jpg" alt="">
@@ -700,7 +700,7 @@
                         </div>
                     </div>
 
-                    {% comment %} Single Artist {% endcomment %}
+                    {# Single Artist #}
                     <div class="single-artists d-flex align-items-center wow fadeInUp" data-wow-delay="350ms">
                         <div class="thumbnail">
                             <img src="img/bg-img/pa6.jpg" alt="">
@@ -710,7 +710,7 @@
                         </div>
                     </div>
 
-                    {% comment %} Single Artist {% endcomment %}
+                    {# Single Artist #}
                     <div class="single-artists d-flex align-items-center wow fadeInUp" data-wow-delay="400ms">
                         <div class="thumbnail">
                             <img src="img/bg-img/pa7.jpg" alt="">
@@ -725,8 +725,8 @@
         </div>
     </div>
 </section>
-{% comment %} ##### Miscellaneous Area End ##### {% endcomment %}
+{# ##### Miscellaneous Area End ##### #}
 
-{% render 'contact-area.liquid' %}
+{% include 'contact-area.njk' %}
 
 {% endblock %}
