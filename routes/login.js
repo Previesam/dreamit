@@ -7,14 +7,21 @@ const Config = require("../config/settings.config.js");
 const bcrypt = require("bcrypt");
 const RefreshToken = require("../models/refresh-token.model.js");
 const randtoken = require("rand-token");
+const { getcookie } = require('../config/getcookie.helper');
 
 /* GET login page. */
 router.get("/", function (req, res, next) {
-  res.render("login", { title: "DreamIt - Login", page_title: "Login" });
+  var path = req.body.redirect;
+  res.render("login", { title: "DreamIt - Login", page_title: "Login", path });
   console.log("Okay");
 });
 
 router.post("/", function (req, res, next) {
+  var cookie = getcookie(req);
+  var path = cookie.path;
+  if (cookie.path === '%2F') {
+    path = '/'
+  }
   var errors = [];
 
   if (!req.body.email || req.body.email.length < 3) {
@@ -81,10 +88,12 @@ router.post("/", function (req, res, next) {
 
             await RefreshToken.findByIdAndUpdate(_refresh.id, newRefresh);
 
-            res.cookie("refreshToken", refreshToken, {
-              httpOnly: true,
-              sameSite: "strict",
-            }).redirect("/");
+            res
+              .cookie("refreshToken", refreshToken, {
+                httpOnly: true,
+                sameSite: "strict",
+              })
+              .redirect(path);
           } else {
             // Create New Token Object
             const newToken = new RefreshToken({
@@ -111,10 +120,12 @@ router.post("/", function (req, res, next) {
 
             newToken.save();
 
-            res.cookie("refreshToken", refreshToken, {
-              httpOnly: true,
-              sameSite: "strict",
-            }).redirect("/");
+            res
+              .cookie("refreshToken", refreshToken, {
+                httpOnly: true,
+                sameSite: "strict",
+              })
+              .redirect(path);
           }
         } else {
           errors.push({

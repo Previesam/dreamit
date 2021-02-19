@@ -2,19 +2,7 @@ const jwt = require("jsonwebtoken");
 const Config = require("../config/settings.config.js");
 const moment = require("moment");
 const RefreshToken = require("../models/refresh-token.model");
-
-function getcookie(req) {
-  const {
-    headers: { cookie },
-  } = req;
-  if (cookie) {
-    return cookie.split(";").reduce((res, item) => {
-      const data = item.trim().split("=");
-      return { ...res, [data[0]]: data[1] };
-    }, {});
-  }
-  return {};
-}
+const { getcookie } = require('../config/getcookie.helper');
 
 exports.verifyToken = async (req, res, next) => {
   // Retrieve Json Web Token from request header

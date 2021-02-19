@@ -24,9 +24,11 @@ const mongoose = require("mongoose");
 
 mongoose.Promise = global.Promise;
 
+var onlineDb = 'mongodb+srv://sa:Sam@@2015!@cluster0.gmpti.mongodb.net/dreamit?retryWrites=true&w=majority'
+
 // Connecting to the database
 mongoose
-  .connect(dbConfig.url, {
+  .connect(onlineDb, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,

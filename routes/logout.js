@@ -1,26 +1,18 @@
 var express = require("express");
 var router = express.Router();
 var RefreshToken = require("../models/refresh-token.model");
-
-function getcookie(req) {
-  const {
-    headers: { cookie },
-  } = req;
-  if (cookie) {
-    return cookie.split(";").reduce((res, item) => {
-      const data = item.trim().split("=");
-      return { ...res, [data[0]]: data[1] };
-    }, {});
-  }
-  return {};
-}
+const { getcookie } = require('../config/getcookie.helper');
 
 /* GET home page. */
 router.get("/", async function (req, res) {
   res.clearCookie("refreshToken");
-  var cookie = getcookie(req)
+  var cookie = getcookie(req);
+  var path = cookie.path;
+  if (cookie.path === '%2F') {
+    path = '/'
+  }
   await RefreshToken.findOneAndDelete({ token: cookie.refreshToken });
-  return res.redirect("/");
+  return res.redirect(path);
 });
 
 module.exports = router;
