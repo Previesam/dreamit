@@ -7,7 +7,7 @@ const Config = require("../config/settings.config.js");
 const bcrypt = require("bcrypt");
 const RefreshToken = require("../models/refresh-token.model.js");
 const randtoken = require("rand-token");
-const { getcookie } = require('../config/getcookie.helper');
+const { getcookie } = require("../config/getcookie.helper");
 
 /* GET login page. */
 router.get("/", function (req, res, next) {
@@ -19,8 +19,8 @@ router.get("/", function (req, res, next) {
 router.post("/", function (req, res, next) {
   var cookie = getcookie(req);
   var path = cookie.path;
-  if (cookie.path === '%2F') {
-    path = '/'
+  if (cookie.path === "%2F") {
+    path = "/";
   }
   var errors = [];
 
@@ -57,76 +57,33 @@ router.post("/", function (req, res, next) {
 
           const refreshToken = randtoken.uid(16);
 
-          // Validation before adding new refresh token to db
-
-          const _refresh = await RefreshToken.findOne({
+          // Create New Token Object
+          const newToken = new RefreshToken({
+            issued: moment().unix(),
+            expiresIn: moment().add(4, "days").unix(),
+            token: refreshToken,
             user: data.id,
+            // Creating the Token
+            access_token: jwt.sign(
+              { sub: data.id, user: userWithoutHash },
+              Config.secret,
+              {
+                issuer: "http://localhost:3000",
+                expiresIn: "1m", // Expires in 1 minutes
+              }
+            ),
           });
 
-          if (_refresh) {
-            // Creating the Token
+          //Save the new token
 
-            newRefresh = {
-              issuedUtc: moment().unix(),
-              expiresUtc: moment().add(4, "days").unix(),
-              token: refreshToken,
-              user: data.id,
-              jwt: {
-                // Creating the Token
-                token: jwt.sign(
-                  { sub: data.id, user: userWithoutHash },
-                  Config.secret,
-                  {
-                    issuer: "http://localhost:3000",
-                    expiresIn: "30m", // Expires in 1 minutes
-                  }
-                ),
-                // Setting token expiry
-                exp: moment().add(30, "m").unix(),
-              },
-            };
+          newToken.save();
 
-            await RefreshToken.findByIdAndUpdate(_refresh.id, newRefresh);
-
-            res
-              .cookie("refreshToken", refreshToken, {
-                httpOnly: true,
-                sameSite: "strict",
-              })
-              .redirect(path);
-          } else {
-            // Create New Token Object
-            const newToken = new RefreshToken({
-              issuedUtc: moment().unix(),
-              expiresUtc: moment().add(4, "days").unix(),
-              token: refreshToken,
-              user: data.id,
-              jwt: {
-                // Creating the Token
-                token: jwt.sign(
-                  { sub: data.id, user: userWithoutHash },
-                  Config.secret,
-                  {
-                    issuer: "http://localhost:3000",
-                    expiresIn: "30m", // Expires in 1 minutes
-                  }
-                ),
-                // Setting token expiry
-                exp: moment().add(30, "m").unix(),
-              },
-            });
-
-            //Save the new token
-
-            newToken.save();
-
-            res
-              .cookie("refreshToken", refreshToken, {
-                httpOnly: true,
-                sameSite: "strict",
-              })
-              .redirect(path);
-          }
+          res
+            .cookie("refreshToken", newToken.token, {
+              httpOnly: true,
+              sameSite: "strict",
+            })
+            .redirect(path);
         } else {
           errors.push({
             message: "Invalid Password please try again",

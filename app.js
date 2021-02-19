@@ -24,7 +24,8 @@ const mongoose = require("mongoose");
 
 mongoose.Promise = global.Promise;
 
-var onlineDb = 'mongodb+srv://sa:Sam@@2015!@cluster0.gmpti.mongodb.net/dreamit?retryWrites=true&w=majority'
+var onlineDb =
+  "mongodb+srv://sa:Sam@@2015!@cluster0.gmpti.mongodb.net/dreamit?retryWrites=true&w=majority";
 
 // Connecting to the database
 mongoose
@@ -33,6 +34,7 @@ mongoose
     useUnifiedTopology: true,
     useFindAndModify: false,
   })
+
   .then(() => {
     console.log("Successfully connected to the database");
   })
@@ -48,7 +50,7 @@ nunjucks.configure("views", {
   express: app,
 });
 
-app.set("view engine", "njk"); // set liquid to default
+app.set("view engine", "html"); // set liquid to default
 
 app.use(logger("dev"));
 app.use(express.json());
